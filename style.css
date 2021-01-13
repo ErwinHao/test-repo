@@ -37,3 +37,28 @@ h1 {
 #btn:hover {
   box-shadow: 0 10px 10px #000;
 }
+
+.navbar {
+  padding: 20px;
+  background-image: linear-gradient(
+    to left,
+    rgb(73, 73, 73),
+    rgb(34, 34, 34),
+    #000
+  );
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #fff;
+  font-weight: 700;
+}
