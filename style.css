@@ -15,17 +15,21 @@ h1 {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 75%;
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  min-height: 50vh;
 }
 
 #btn {
   padding: 20px;
   border-radius: 10px;
   background-color: #333;
+  height: 50%;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -61,4 +65,15 @@ h1 {
   margin-right: 20px;
   color: #fff;
   font-weight: 700;
+}
+
+.footer {
+  margin: 0 auto;
+  padding: 20px;
+  width: 75%;
+  height: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
 }
