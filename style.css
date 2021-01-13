@@ -8,6 +8,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #c3c3c3;
+  padding-top: 50px;
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
 }
 
 .container {
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   max-width: 75%;
   padding: 20px;
   display: flex;
@@ -42,7 +43,7 @@ h1 {
   box-shadow: 0 10px 10px #000;
 }
 
-.navbar {
+#navbar {
   padding: 20px;
   background-image: linear-gradient(
     to left,
@@ -50,21 +51,104 @@ h1 {
     rgb(34, 34, 34),
     #000
   );
+  top: 0;
+  width: 100%;
+  position: fixed;
+  transition: background-image 0.3s ease-in;
 }
 
-.navbar ul {
+#navbar ul {
   display: flex;
 }
 
-.navbar li {
+#navbar li {
   list-style: none;
 }
 
-.navbar li a {
+#navbar li a {
   text-decoration: none;
   margin-right: 20px;
   color: #fff;
   font-weight: 700;
+}
+
+.scrolled {
+  background-image: none !important;
+}
+
+.banner {
+  background: url('./img/banner.jpeg') no-repeat center center,
+    radial-gradient(rgb(87, 87, 87), #111);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 15em 0;
+  text-align: center;
+}
+
+.banner__container {
+  color: #fff;
+}
+
+.banner__container h1 {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+#banner__button {
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: rgb(66, 163, 243);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  transition: opacity 0.3s ease-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.2;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+#banner__button:hover {
+  box-shadow: 0 15px 10px -10px rgb(52, 148, 238);
+}
+
+#banner__button:hover .overlay {
+  display: block;
+}
+
+.title {
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  padding: 10px 20px;
+  border: 1px solid #333;
+}
+
+.title h1 {
+  color: #fff;
+  font-weight: 200;
+}
+
+#alert {
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(228, 73, 34);
+  color: #fff;
+  display: none;
+}
+
+.display {
+  display: block !important;
 }
 
 .footer {
@@ -76,4 +160,69 @@ h1 {
   color: #fff;
   text-align: center;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 960px) {
+  .banner__container h1 {
+    font-size: 3rem;
+  }
+
+  #banner__button {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    padding-top: 200px;
+  }
+
+  .banner__container h1 {
+    font-size: 2.5rem;
+  }
+
+  #banner__button {
+    padding: 10px 10px;
+    font-size: 0.9rem;
+  }
+
+  #navbar {
+    padding: 0;
+    z-index: 1;
+    background-image: none;
+    background-color: rgb(36, 35, 35) !important;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 0;
+  }
+
+  #navbar ul li {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+  }
+
+  #navbar ul li:hover {
+    background-color: rgb(161, 161, 161);
+  }
+
+  #navbar ul li:last-child {
+    border-bottom: 1px solid rgb(104, 104, 104);
+  }
+
+  .scrolled {
+    background-color: rgb(36, 35, 35) !important;
+  }
+
+  .title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
