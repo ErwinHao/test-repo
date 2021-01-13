@@ -1,5 +1,5 @@
-\*This is a Repo
+# This is a Repo
 
-\*\*What is a repo?
+## What is a repo?
 
 It's simply a repo.
